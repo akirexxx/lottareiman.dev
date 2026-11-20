@@ -464,3 +464,98 @@ footer p {
         padding: 20px;
     }
 }
+
+
+
+/* =================================
+   COURSES & CERTIFICATES
+================================= */
+
+.course-group-title {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 35px 0 18px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: 0.25s ease;
+}
+
+.course-card:hover {
+    border-color: var(--purple);
+    transform: translateY(-3px);
+}
+
+.course-card img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+    display: block;
+    background: #201b30;
+}
+
+.course-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-platform {
+    color: var(--green);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.course-info h3 {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 12px 0 8px;
+}
+
+.course-info > p {
+    color: var(--subtle);
+    font-size: 11px;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.completed {
+    color: var(--green);
+}
+
+.in-progress {
+    color: #e5b65c;
+}
+
+@media (max-width: 750px) {
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-card img {
+        height: 180px;
+    }
+}
