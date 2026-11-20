@@ -11,9 +11,10 @@
 body {
     background-color: #080a0d;
     color: #d5d9df;
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
+    font-family: "Courier New", monospace;
+    line-height: 1.8;
 }
+
 
 /* NAVIGATION */
 
@@ -294,4 +295,24 @@ footer p {
     .content-section {
         padding: 60px 0;
     }
+}
+
+
+/* TERMINAL STYLE */
+
+.terminal-text {
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    line-height: 2;
+    color: #aab4ae;
+    max-width: 800px;
+}
+
+.terminal-text p {
+    margin-bottom: 25px;
+}
+
+.terminal-text p::before {
+    content: "> ";
+    color: #39d98a;
 }
