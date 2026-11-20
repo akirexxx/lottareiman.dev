@@ -281,9 +281,9 @@ main {
 .certificate-label,
 .note-category {
     display: inline-block;
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 1px;
-    font-family: "Courier New", monospace;
+    font-family: "Consolas", monospace;
 }
 
 .status {
@@ -330,7 +330,7 @@ main {
     display: inline-block;
     margin-top: 20px;
     color: var(--green);
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 1px;
 }
 
