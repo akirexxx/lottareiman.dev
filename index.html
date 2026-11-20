@@ -578,7 +578,6 @@
 </footer>
 
 
-
 <script>
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
 
@@ -594,7 +593,6 @@ function scrambleText() {
     let iteration = 0;
     const revealed = Array(11).fill(false);
 
-    // Skapa en span för varje bokstav
     elements.forEach((element, wordIndex) => {
         element.innerHTML = "";
 
@@ -612,8 +610,7 @@ function scrambleText() {
     const interval = setInterval(() => {
 
         original.forEach((word, wordIndex) => {
-            const element = elements[wordIndex];
-            const spans = element.querySelectorAll("span");
+            const spans = elements[wordIndex].querySelectorAll("span");
 
             word.split("").forEach((letter, index) => {
                 const position = wordIndex === 0
@@ -621,21 +618,22 @@ function scrambleText() {
                     : index + original[0].length;
 
                 if (position < iteration) {
-
                     if (!revealed[position]) {
                         revealed[position] = true;
 
-                        spans[index].textContent = letter;
-                        spans[index].classList.add("scramble-flash");
+                        const span = spans[index];
 
-                        // Orange sken i en sekund
-                        setTimeout(() => {
-                            spans[index].classList.remove("scramble-flash");
-                        }, 1000);
+                        // Visa rätt bokstav direkt i vitt
+                        span.classList.remove("scramble-flash");
+                        span.textContent = letter;
                     }
-
                 } else {
-                    spans[index].textContent = characters[
+                    const span = spans[index];
+
+                    // Slumpmässiga symboler lyser orange
+                    span.classList.add("scramble-flash");
+
+                    span.textContent = characters[
                         Math.floor(Math.random() * characters.length)
                     ];
                 }
@@ -654,8 +652,6 @@ function scrambleText() {
 scrambleText();
 setInterval(scrambleText, 7000);
 </script>
-
-
     
 </body>
 </html>
