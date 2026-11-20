@@ -43,14 +43,14 @@ body::before {
     position: fixed;
     inset: 0;
     z-index: -2;
-   background:
-    linear-gradient(
-        rgba(8, 7, 12, 0.15),
-        rgba(8, 7, 12, 0.75)
-    ),
-    url("images/backround_purple.jpg") center center / cover no-repeat;
-
-filter: brightness(0.95) saturate(0.85);
+    background:
+        linear-gradient(
+            rgba(8, 7, 12, 0.48),
+            rgba(8, 7, 12, 0.82)
+        ),
+        url("images/backround_purple.jpg") center center / cover no-repeat;
+    filter: brightness(0.75) saturate(1.15);
+}
 
 body::after {
     content: "";
