@@ -556,6 +556,48 @@
     <p>STATUS: LEARNING · BUILDING · EXPLORING</p>
 </footer>
 
+    
+<script>
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
+
+function scrambleText() {
+    const firstName = document.querySelector(".first-name");
+    const lastName = document.querySelector(".last-name");
+
+    const originalText = "lotta reiman";
+    let iteration = 0;
+
+    const interval = setInterval(() => {
+        const scrambled = originalText
+            .split("")
+            .map((letter, index) => {
+                if (letter === " ") return " ";
+
+                if (index < iteration) return letter;
+
+                return characters[
+                    Math.floor(Math.random() * characters.length)
+                ];
+            })
+            .join("");
+
+        firstName.textContent = scrambled.split(" ")[0];
+        lastName.textContent = scrambled.split(" ")[1];
+
+        iteration += 0.35;
+
+        if (iteration >= originalText.length) {
+            clearInterval(interval);
+            firstName.textContent = "lotta";
+            lastName.textContent = "reiman";
+        }
+    }, 35);
+}
+
+scrambleText();
+setInterval(scrambleText, 6000);
+</script>
+
 </body>
 </html>
 
