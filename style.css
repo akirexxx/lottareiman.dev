@@ -643,3 +643,132 @@ footer p {
         justify-content: center;
     }
 }
+
+
+/* =================================
+   EDUCATION TIMELINE
+================================= */
+
+.education-list {
+    border-top: 1px solid var(--border);
+}
+
+.education-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.6fr auto;
+    align-items: center;
+    gap: 25px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s ease,
+                padding 0.3s ease,
+                border-color 0.3s ease;
+
+    animation: fadeInUp 0.7s ease both;
+}
+
+.education-row:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.education-row:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.education-row:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.education-row:hover {
+    background: rgba(161, 106, 255, 0.06);
+    padding-left: 12px;
+    border-color: var(--purple);
+}
+
+.education-name {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.education-provider,
+.education-date {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.education-status {
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.education-status.ongoing {
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    animation: pulse 2s infinite;
+}
+
+.education-status.completed {
+    color: var(--green);
+    border: 1px solid rgba(101, 219, 160, 0.4);
+}
+
+.education-status.education {
+    color: var(--purple);
+    border: 1px solid rgba(161, 106, 255, 0.5);
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(255, 135, 61, 0);
+    }
+    50% {
+        box-shadow: 0 0 12px rgba(255, 135, 61, 0.25);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+    .education-row {
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+    }
+
+    .education-provider,
+    .education-date {
+        grid-column: 1;
+    }
+
+    .education-status {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+/* Respect reduced motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .education-row,
+    .education-status.ongoing {
+        animation: none;
+        transition: none;
+    }
+}
+
