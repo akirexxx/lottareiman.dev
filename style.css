@@ -45,11 +45,11 @@ body::before {
     z-index: -2;
     background:
         linear-gradient(
-            rgba(8, 7, 12, 0.48),
-            rgba(8, 7, 12, 0.82)
+            rgba(8, 7, 12, 0.30),
+            rgba(8, 7, 12, 0.65)
         ),
         url("images/black.jpg") center center / cover no-repeat;
-    filter: brightness(0.75) saturate(1.15);
+    filter: brightness(0.90) saturate(1.05);
 }
 
 body::after {
@@ -61,7 +61,7 @@ body::after {
     background:
         radial-gradient(
             circle at 10% 15%,
-            rgba(116, 42, 255, 0.17),
+            rgba(116, 42, 255, 0.09),
             transparent 35%
         ),
         radial-gradient(
