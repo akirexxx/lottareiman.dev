@@ -256,7 +256,8 @@ main {
 
 .section-intro {
     color: var(--muted);
-    font-size: 12px;
+    font-size: 15px;
+    line-height: 1.8;
     max-width: 750px;
     margin-bottom: 30px;
 }
@@ -379,11 +380,12 @@ main {
 
 .tags span {
     background: #17101f;
-    border: 1px solid rgba(161, 106, 255, 0.25);
+    border: 1px solid rgba(161, 106, 255, 0.3);
     border-radius: 6px;
     color: #c7a9ff;
-    padding: 6px 10px;
-    font-size: 9px;
+    padding: 8px 12px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
 }
 
 /* =================================
