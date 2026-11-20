@@ -30,6 +30,7 @@ body {
     background: var(--background);
     color: var(--text);
     font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.4px;
     line-height: 1.7;
     overflow-x: hidden;
     position: relative;
@@ -172,10 +173,9 @@ main {
 }
 
 .hero-description {
-    max-width: 650px;
-    color: #c1bacb;
-    font-size: 14px;
-    margin: 20px 0 30px;
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.4px;
 }
 
 .hero-links {
@@ -208,17 +208,17 @@ main {
 .hero-status {
     margin-top: 45px;
     color: var(--muted);
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .status-dot {
     display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: var(--green);
+    width: 10px;
+    height: 10px;
+    background: var(--orange);
     border-radius: 50%;
     margin-right: 8px;
-    box-shadow: 0 0 10px var(--green);
+    box-shadow: 0 0 12px var(--orange);
 }
 
 /* =================================
@@ -535,9 +535,10 @@ footer p {
         gap: 13px;
     }
 
-    .nav-links a {
-        font-size: 10px;
-    }
+   .nav-links a {
+    font-size: 15px;
+    letter-spacing: 0.8px;
+   }
 
     .card-grid,
     .course-grid {
