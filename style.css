@@ -159,7 +159,7 @@ main {
 
 .eyebrow {
     color: var(--purple);
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 3px;
 }
 
@@ -231,7 +231,7 @@ main {
 
 .section-heading > span {
     color: var(--orange);
-    font-size: 13px;
+    font-size: 18px;
     letter-spacing: 2px;
 }
 
@@ -316,14 +316,14 @@ main {
 
 .card p {
     color: var(--muted);
-    font-size: 11px;
+    font-size: 15px;
     line-height: 2;
 }
 
 .card small {
     display: block;
     color: var(--subtle);
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 15px;
 }
 
@@ -336,7 +336,7 @@ main {
 .certificate-label,
 .note-category {
     display: inline-block;
-    font-size: 10px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-family: "JetBrains Mono", monospace;
 }
