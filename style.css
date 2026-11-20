@@ -172,6 +172,26 @@ main {
     line-height: 1.1;
 }
 
+
+.hero h1 .revealed {
+    color: var(--orange);
+    text-shadow: 0 0 12px rgba(255, 135, 61, 0.8);
+    animation: revealToWhite 0.7s ease forwards;
+}
+
+@keyframes revealToWhite {
+    from {
+        color: var(--orange);
+        text-shadow: 0 0 12px rgba(255, 135, 61, 0.8);
+    }
+
+    to {
+        color: white;
+        text-shadow: none;
+    }
+}
+
+
 .hero-description {
     font-size: 16px;
     line-height: 1.8;
