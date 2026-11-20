@@ -33,7 +33,7 @@
 
         <p class="eyebrow">IT SECURITY SPECIALIST STUDENT</p>
 
-        <h1 class="scramble-text" data-value="lotta reiman">
+        <h1 class="scramble-text">
             <span class="first-name">lotta</span>
             <span class="last-name">reiman</span>
         </h1>
@@ -564,40 +564,48 @@ function scrambleText() {
     const firstName = document.querySelector(".first-name");
     const lastName = document.querySelector(".last-name");
 
-    const originalText = "lotta reiman";
+    const original = ["lotta", "reiman"];
     let iteration = 0;
 
     const interval = setInterval(() => {
-        const scrambled = originalText
-            .split("")
-            .map((letter, index) => {
-                if (letter === " ") return " ";
 
-                if (index < iteration) return letter;
+        original.forEach((word, wordIndex) => {
+            const element = wordIndex === 0 ? firstName : lastName;
 
-                return characters[
-                    Math.floor(Math.random() * characters.length)
-                ];
-            })
-            .join("");
+            element.textContent = word
+                .split("")
+                .map((letter, index) => {
+                    const position = wordIndex === 0
+                        ? index
+                        : index + original[0].length;
 
-        firstName.textContent = scrambled.split(" ")[0];
-        lastName.textContent = scrambled.split(" ")[1];
+                    if (position < iteration) {
+                        return letter;
+                    }
 
-        iteration += 0.35;
+                    return characters[
+                        Math.floor(Math.random() * characters.length)
+                    ];
+                })
+                .join("");
+        });
 
-        if (iteration >= originalText.length) {
+        iteration += 0.4;
+
+        if (iteration >= 11) {
             clearInterval(interval);
             firstName.textContent = "lotta";
             lastName.textContent = "reiman";
         }
-    }, 35);
+
+    }, 40);
 }
 
 scrambleText();
 setInterval(scrambleText, 6000);
 </script>
 
+    
 </body>
 </html>
 
