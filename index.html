@@ -577,7 +577,7 @@
     <p>STATUS: LEARNING · BUILDING · EXPLORING</p>
 </footer>
 
-    
+
 <script>
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
 
@@ -586,38 +586,57 @@ function scrambleText() {
     const lastName = document.querySelector(".last-name");
 
     const original = ["lotta", "reiman"];
+    const elements = [firstName, lastName];
+
     let iteration = 0;
+    const revealed = Array(11).fill(false);
+
+    // Skapa en span för varje bokstav
+    elements.forEach(element => {
+        element.innerHTML = "";
+
+        for (let i = 0; i < element.textContent.length; i++) {
+            const span = document.createElement("span");
+            span.textContent = characters[
+                Math.floor(Math.random() * characters.length)
+            ];
+            element.appendChild(span);
+        }
+    });
 
     const interval = setInterval(() => {
-
         original.forEach((word, wordIndex) => {
-            const element = wordIndex === 0 ? firstName : lastName;
+            const element = elements[wordIndex];
+            const spans = element.querySelectorAll("span");
 
-            element.innerHTML = word
-                .split("")
-                .map((letter, index) => {
-                    const position = wordIndex === 0
-                        ? index
-                        : index + original[0].length;
+            word.split("").forEach((letter, index) => {
+                const position = wordIndex === 0
+                    ? index
+                    : index + original[0].length;
 
-                    if (position < iteration) {
-                        return `<span class="revealed">${letter}</span>`;
+                if (position < iteration) {
+                    if (!revealed[position]) {
+                        revealed[position] = true;
+                        spans[index].textContent = letter;
+                        spans[index].classList.add("scramble-flash");
+
+                        // Ta bort det orange skenet efter en sekund
+                        setTimeout(() => {
+                            spans[index].classList.remove("scramble-flash");
+                        }, 1000);
                     }
-
-                    return characters[
+                } else {
+                    spans[index].textContent = characters[
                         Math.floor(Math.random() * characters.length)
                     ];
-                })
-                .join("");
+                }
+            });
         });
 
         iteration += 0.25;
 
         if (iteration >= 11) {
             clearInterval(interval);
-
-            firstName.textContent = "lotta";
-            lastName.textContent = "reiman";
         }
 
     }, 50);
@@ -626,6 +645,7 @@ function scrambleText() {
 scrambleText();
 setInterval(scrambleText, 7000);
 </script>
+
     
 </body>
 </html>
