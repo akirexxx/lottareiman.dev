@@ -774,3 +774,144 @@ footer p {
     }
 }
 
+
+/* =================================
+   MOBILE IMPROVEMENTS
+================================= */
+
+@media (max-width: 750px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 100px 0 70px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 58px);
+        line-height: 1.15;
+    }
+
+    .eyebrow {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-status {
+        font-size: 11px;
+        line-height: 1.7;
+        margin-top: 30px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .section-intro {
+        font-size: 13px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .tags span {
+        font-size: 11px;
+    }
+
+    .education-row {
+        grid-template-columns: 1fr auto;
+        gap: 8px;
+    }
+
+    .education-name {
+        font-size: 13px;
+    }
+
+    .education-provider,
+    .education-date {
+        font-size: 11px;
+    }
+
+    .contact-card {
+        gap: 25px;
+        padding: 25px 18px;
+    }
+
+    .contact-image {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    main {
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-links {
+        gap: 15px;
+    }
+
+    .hero-links a {
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .terminal-panel {
+        padding: 20px;
+    }
+
+    .contact-image {
+        width: 140px;
+        height: 140px;
+    }
+}
