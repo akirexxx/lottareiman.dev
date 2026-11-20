@@ -1,7 +1,23 @@
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 /* =================================
-   GLOBAL STYLES
+   GLOBAL
 ================================= */
+
+:root {
+    --background: #08070c;
+    --panel: #08080b;
+    --panel-hover: #100d17;
+    --border: #292332;
+    --text: #f0edf5;
+    --muted: #a29bad;
+    --subtle: #777181;
+    --purple: #a16aff;
+    --orange: #ff873d;
+    --pink: #e84d91;
+    --green: #65dba0;
+}
 
 * {
     margin: 0;
@@ -10,23 +26,48 @@
     scroll-behavior: smooth;
 }
 
-:root {
-    --background: #09080e;
-    --panel: #12101b;
-    --panel-hover: #191526;
-    --border: #292437;
-    --text: #e5e1ed;
-    --muted: #a5a0b2;
-    --subtle: #777386;
-    --green: #39d98a;
-    --purple: #9b7bea;
-}
-
 body {
     background: var(--background);
     color: var(--text);
-    font-family: "Consolas", monospace;
+    font-family: "JetBrains Mono", monospace;
     line-height: 1.7;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background image and dark overlay */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            rgba(8, 7, 12, 0.48),
+            rgba(8, 7, 12, 0.82)
+        ),
+        url("images/background-wave.jpg") center center / cover no-repeat;
+    filter: brightness(0.75) saturate(1.15);
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(116, 42, 255, 0.17),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 75%,
+            rgba(255, 92, 38, 0.13),
+            transparent 35%
+        );
 }
 
 /* =================================
@@ -37,13 +78,13 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(9, 8, 14, 0.96);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(12px);
+    background: rgba(5, 5, 8, 0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(161, 106, 255, 0.18);
 }
 
 nav {
-    max-width: 1150px;
+    max-width: 1250px;
     margin: auto;
     padding: 20px 30px;
     display: flex;
@@ -52,15 +93,16 @@ nav {
 }
 
 .logo {
-    color: var(--text);
-    font-size: 24px;
-    font-weight: bold;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
     text-decoration: none;
 }
 
 .logo span,
 .hero h1 span {
-    color: var(--green);
+    color: var(--purple);
 }
 
 .nav-links {
@@ -72,12 +114,12 @@ nav {
 .nav-links a {
     color: var(--muted);
     text-decoration: none;
-    font-size: 12px;
-    transition: color 0.2s;
+    font-size: 11px;
+    transition: 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--green);
+    color: var(--orange);
 }
 
 /* =================================
@@ -85,15 +127,15 @@ nav {
 ================================= */
 
 main {
-    max-width: 1150px;
+    max-width: 1250px;
     margin: auto;
     padding: 0 30px;
 }
 
 .section {
     padding: 85px 0;
-    border-top: 1px solid var(--border);
-    scroll-margin-top: 80px;
+    border-top: 1px solid rgba(255,255,255,0.09);
+    scroll-margin-top: 85px;
 }
 
 /* =================================
@@ -101,37 +143,39 @@ main {
 ================================= */
 
 .hero {
-    min-height: 570px;
+    min-height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 80px 0;
+    padding: 90px 0;
 }
 
 .terminal-label {
-    color: var(--green);
-    font-size: 14px;
+    color: var(--orange);
+    font-size: 13px;
     margin-bottom: 25px;
 }
 
 .eyebrow {
     color: var(--purple);
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-size: 11px;
+    letter-spacing: 3px;
 }
 
 .hero h1 {
-    font-size: clamp(42px, 8vw, 75px);
-    color: var(--text);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(48px, 8vw, 85px);
+    color: white;
     margin: 15px 0;
+    line-height: 1.1;
 }
 
 .hero-description {
-    max-width: 600px;
-    color: var(--muted);
-    font-size: 16px;
-    margin-bottom: 30px;
+    max-width: 650px;
+    color: #c1bacb;
+    font-size: 14px;
+    margin: 20px 0 30px;
 }
 
 .hero-links {
@@ -142,27 +186,29 @@ main {
 }
 
 .hero-links a {
-    color: var(--green);
+    color: var(--orange);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .hero-links .primary-button {
-    border: 1px solid var(--green);
-    border-radius: 6px;
-    padding: 11px 18px;
-    transition: 0.2s;
+    border: 1px solid var(--purple);
+    border-radius: 8px;
+    padding: 12px 20px;
+    color: white;
+    background: rgba(113, 65, 190, 0.12);
+    transition: 0.25s;
 }
 
 .hero-links .primary-button:hover {
-    background: var(--green);
-    color: var(--background);
+    background: var(--purple);
+    box-shadow: 0 0 25px rgba(161, 106, 255, 0.35);
 }
 
 .hero-status {
-    margin-top: 40px;
-    color: var(--subtle);
-    font-size: 11px;
+    margin-top: 45px;
+    color: var(--muted);
+    font-size: 10px;
 }
 
 .status-dot {
@@ -172,6 +218,7 @@ main {
     background: var(--green);
     border-radius: 50%;
     margin-right: 8px;
+    box-shadow: 0 0 10px var(--green);
 }
 
 /* =================================
@@ -183,20 +230,21 @@ main {
 }
 
 .section-heading > span {
-    color: var(--green);
-    font-size: 11px;
+    color: var(--orange);
+    font-size: 10px;
     letter-spacing: 2px;
 }
 
 .section-heading h2 {
-    font-size: 26px;
-    color: var(--text);
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 30px;
+    color: white;
     margin-top: 10px;
 }
 
 .section-intro {
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
     max-width: 750px;
     margin-bottom: 30px;
 }
@@ -206,16 +254,17 @@ main {
 ================================= */
 
 .terminal-panel {
-    background: var(--panel);
+    background: rgba(5, 5, 8, 0.94);
     border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 30px;
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.3);
 }
 
 .about-panel p {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 2;
+    color: #bbb4c6;
+    font-size: 12px;
+    line-height: 2.1;
     margin-bottom: 20px;
 }
 
@@ -225,7 +274,7 @@ main {
 
 .about-panel p::before {
     content: "> ";
-    color: var(--green);
+    color: var(--orange);
 }
 
 /* =================================
@@ -235,40 +284,46 @@ main {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    gap: 20px;
 }
 
 .card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 25px;
-    transition: 0.25s ease;
+    background: rgba(5, 5, 8, 0.96);
+    border: 1px solid rgba(180, 160, 210, 0.17);
+    border-radius: 17px;
+    padding: 28px;
     min-width: 0;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
 }
 
 .card:hover {
-    border-color: var(--purple);
-    background: var(--panel-hover);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    border-color: rgba(161, 106, 255, 0.65);
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.4),
+        0 0 25px rgba(130, 75, 230, 0.12);
 }
 
 .card h3 {
-    color: var(--text);
-    font-size: 16px;
-    margin: 14px 0 10px;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    margin: 15px 0 12px;
 }
 
 .card p {
     color: var(--muted);
-    font-size: 12px;
-    line-height: 1.9;
+    font-size: 11px;
+    line-height: 2;
 }
 
 .card small {
     display: block;
     color: var(--subtle);
-    font-size: 11px;
+    font-size: 10px;
     margin-top: 15px;
 }
 
@@ -281,24 +336,21 @@ main {
 .certificate-label,
 .note-category {
     display: inline-block;
-    font-size: 15px;
+    font-size: 10px;
     letter-spacing: 1px;
-    font-family: "Consolas", monospace;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .status {
     color: var(--green);
 }
 
-.project-type {
-    color: var(--purple);
+.project-type,
+.note-category {
+    color: var(--orange);
 }
 
 .certificate-label {
-    color: var(--green);
-}
-
-.note-category {
     color: var(--purple);
 }
 
@@ -314,12 +366,12 @@ main {
 }
 
 .tags span {
-    background: #201b30;
-    border: 1px solid #332b49;
-    border-radius: 5px;
-    color: #b9addb;
-    padding: 5px 9px;
-    font-size: 10px;
+    background: #17101f;
+    border: 1px solid rgba(161, 106, 255, 0.25);
+    border-radius: 6px;
+    color: #c7a9ff;
+    padding: 6px 10px;
+    font-size: 9px;
 }
 
 /* =================================
@@ -329,30 +381,87 @@ main {
 .note-status {
     display: inline-block;
     margin-top: 20px;
-    color: var(--green);
-    font-size: 15px;
+    color: var(--orange);
+    font-size: 10px;
     letter-spacing: 1px;
 }
 
 /* =================================
-   CERTIFICATES
+   COURSES & CERTIFICATES
 ================================= */
 
-.certificate-card {
+.course-group-title {
+    color: var(--purple);
+    font-size: 13px;
+    margin: 35px 0 18px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.course-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    overflow: hidden;
+    background: rgba(5, 5, 8, 0.96);
+    border: 1px solid rgba(180, 160, 210, 0.17);
+    border-radius: 17px;
+    transition: 0.3s ease;
 }
 
-.certificate-card a {
+.course-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purple);
+    box-shadow: 0 0 25px rgba(130, 75, 230, 0.15);
+}
+
+.course-card img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    display: block;
+    background: #17101f;
+}
+
+.course-info {
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-info h3 {
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px 0 8px;
+}
+
+.course-info > p {
+    color: var(--subtle);
+    font-size: 10px;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 22px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.completed {
     color: var(--green);
-    text-decoration: none;
-    font-size: 12px;
-    margin-top: 22px;
 }
 
-.certificate-card a:hover {
-    text-decoration: underline;
+.in-progress {
+    color: var(--orange);
 }
 
 /* =================================
@@ -360,7 +469,7 @@ main {
 ================================= */
 
 .education-card {
-    max-width: 550px;
+    max-width: 600px;
 }
 
 .education-card h3 {
@@ -373,7 +482,7 @@ main {
 
 .contact-section > p {
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
     max-width: 650px;
 }
 
@@ -384,13 +493,13 @@ main {
 }
 
 .contact-links a {
-    color: var(--green);
+    color: var(--orange);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .contact-links a:hover {
-    text-decoration: underline;
+    color: var(--purple);
 }
 
 /* =================================
@@ -398,6 +507,7 @@ main {
 ================================= */
 
 footer {
+    background: rgba(5, 5, 8, 0.9);
     border-top: 1px solid var(--border);
     padding: 30px;
     text-align: center;
@@ -422,19 +532,20 @@ footer p {
 
     .nav-links {
         justify-content: center;
-        gap: 12px;
+        gap: 13px;
     }
 
     .nav-links a {
-        font-size: 11px;
+        font-size: 10px;
     }
 
-    .card-grid {
+    .card-grid,
+    .course-grid {
         grid-template-columns: 1fr;
     }
 
     .hero {
-        min-height: 450px;
+        min-height: 480px;
     }
 
     .section {
@@ -442,7 +553,11 @@ footer p {
     }
 
     .section-heading h2 {
-        font-size: 22px;
+        font-size: 25px;
+    }
+
+    .terminal-panel {
+        padding: 23px;
     }
 }
 
@@ -457,105 +572,10 @@ footer p {
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: 42px;
     }
 
     .card {
-        padding: 20px;
-    }
-}
-
-
-
-/* =================================
-   COURSES & CERTIFICATES
-================================= */
-
-.course-group-title {
-    color: var(--purple);
-    font-size: 14px;
-    font-weight: 500;
-    margin: 35px 0 18px;
-}
-
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-}
-
-.course-card {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    transition: 0.25s ease;
-}
-
-.course-card:hover {
-    border-color: var(--purple);
-    transform: translateY(-3px);
-}
-
-.course-card img {
-    width: 100%;
-    height: 155px;
-    object-fit: cover;
-    display: block;
-    background: #201b30;
-}
-
-.course-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.course-platform {
-    color: var(--green);
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-.course-info h3 {
-    color: var(--text);
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 12px 0 8px;
-}
-
-.course-info > p {
-    color: var(--subtle);
-    font-size: 11px;
-}
-
-.course-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-top: auto;
-    padding-top: 20px;
-    color: var(--muted);
-    font-size: 10px;
-}
-
-.completed {
-    color: var(--green);
-}
-
-.in-progress {
-    color: #e5b65c;
-}
-
-@media (max-width: 750px) {
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .course-card img {
-        height: 180px;
+        padding: 21px;
     }
 }
