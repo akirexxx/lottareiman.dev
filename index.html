@@ -1,13 +1,185 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cybersecurity Portfolio</title>
+    <title>Lotta | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Lotta Reiman</h1>
-    <p>IT Security Specialist Student</p>
-    <p>Welcome to my portfolio.</p>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">LR<span>.</span></a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <p class="terminal">$ whoami</p>
+            <p class="role">IT SECURITY SPECIALIST STUDENT</p>
+            <h1>Lotta Reiman<span>.</span></h1>
+            <p class="intro">
+                Curious about how systems work, how they break,
+                and how to make them more secure.
+            </p>
+            <a href="#projects" class="main-button">Explore my work →</a>
+            <p class="location">Stockholm, Sweden // Open to LIA opportunities</p>
+        </section>
+
+        <section id="about" class="content-section">
+            <p class="section-number">01 / ABOUT</p>
+            <h2>Getting to know me</h2>
+            <p>
+                I'm an IT Security Specialist student at IT-Högskolan
+                in Stockholm, with a growing interest in cybersecurity,
+                system security and vulnerability research.
+            </p>
+            <p>
+                Before entering the world of IT, I spent around ten years
+                working within the Swedish justice system. That experience
+                taught me to work methodically, handle sensitive information
+                and analyze complex situations with attention to detail.
+            </p>
+            <p>
+                Today, I'm combining that background with hands-on
+                technical learning. I enjoy exploring systems,
+                understanding vulnerabilities and turning theory into practice.
+            </p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <p class="section-number">02 / SKILLS</p>
+            <h2>Technical toolkit</h2>
+            <p class="section-description">
+                Technologies and tools I'm currently exploring and developing.
+            </p>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>Python</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Operating Systems</h3>
+                    <p>Linux · Windows · Windows Server</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Networking</h3>
+                    <p>TCP/IP · DNS · DHCP · Firewalls</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Security</h3>
+                    <p>Web Security · Burp Suite · SIEM</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Infrastructure</h3>
+                    <p>Active Directory · VMware</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Git · GitHub · TryHackMe</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <p class="section-number">03 / PROJECTS</p>
+            <h2>Things I've been working on</h2>
+            <p class="section-description">
+                Practical projects, experiments and security labs.
+            </p>
+
+            <div class="project-card">
+                <p class="project-type">01 // INFRASTRUCTURE</p>
+                <h3>Active Directory Lab</h3>
+                <p>
+                    Building and configuring a Windows Server environment
+                    with Active Directory, users, groups, permissions
+                    and Group Policy.
+                </p>
+                <div class="tags">
+                    <span>Windows Server</span>
+                    <span>Active Directory</span>
+                    <span>Networking</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <p class="project-type">02 // PROGRAMMING</p>
+                <h3>Python Projects</h3>
+                <p>
+                    Developing Python applications and tools as part
+                    of my studies, exploring automation, data handling
+                    and basic security concepts.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Automation</span>
+                    <span>Security</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <p class="project-type">03 // SECURITY LABS</p>
+                <h3>Web Security & Vulnerability Testing</h3>
+                <p>
+                    Exploring web application security and learning
+                    to identify and understand common vulnerabilities
+                    in controlled lab environments.
+                </p>
+                <div class="tags">
+                    <span>Burp Suite</span>
+                    <span>OWASP</span>
+                    <span>Web Security</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="content-section">
+            <p class="section-number">04 / EDUCATION</p>
+            <h2>Learning & development</h2>
+            <div class="education-item">
+                <h3>IT Security Specialist</h3>
+                <p>IT-Högskolan · 2026–2028</p>
+                <span>Ongoing</span>
+            </div>
+            <div class="education-item">
+                <h3>Cybersecurity Training</h3>
+                <p>TryHackMe · Hands-on security learning</p>
+            </div>
+            <div class="education-item">
+                <h3>Security Monitoring and SIEM Fundamentals</h3>
+                <p>Hack The Box Academy</p>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section contact-section">
+            <p class="section-number">05 / CONTACT</p>
+            <h2>Let's connect.</h2>
+            <p>
+                Interested in cybersecurity, security research
+                or potential LIA opportunities?
+            </p>
+            <a href="https://github.com/akirexxx" target="_blank">GitHub ↗</a>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Lotta Reiman · Built while learning.</p>
+        <p>STATUS: LEARNING & BUILDING</p>
+    </footer>
+
 </body>
 </html>
