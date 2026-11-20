@@ -578,12 +578,15 @@
 </footer>
 
 
+
 <script>
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
 
 function scrambleText() {
     const firstName = document.querySelector(".first-name");
     const lastName = document.querySelector(".last-name");
+
+    if (!firstName || !lastName) return;
 
     const original = ["lotta", "reiman"];
     const elements = [firstName, lastName];
@@ -592,19 +595,22 @@ function scrambleText() {
     const revealed = Array(11).fill(false);
 
     // Skapa en span för varje bokstav
-    elements.forEach(element => {
+    elements.forEach((element, wordIndex) => {
         element.innerHTML = "";
 
-        for (let i = 0; i < element.textContent.length; i++) {
+        for (let i = 0; i < original[wordIndex].length; i++) {
             const span = document.createElement("span");
+
             span.textContent = characters[
                 Math.floor(Math.random() * characters.length)
             ];
+
             element.appendChild(span);
         }
     });
 
     const interval = setInterval(() => {
+
         original.forEach((word, wordIndex) => {
             const element = elements[wordIndex];
             const spans = element.querySelectorAll("span");
@@ -615,16 +621,19 @@ function scrambleText() {
                     : index + original[0].length;
 
                 if (position < iteration) {
+
                     if (!revealed[position]) {
                         revealed[position] = true;
+
                         spans[index].textContent = letter;
                         spans[index].classList.add("scramble-flash");
 
-                        // Ta bort det orange skenet efter en sekund
+                        // Orange sken i en sekund
                         setTimeout(() => {
                             spans[index].classList.remove("scramble-flash");
                         }, 1000);
                     }
+
                 } else {
                     spans[index].textContent = characters[
                         Math.floor(Math.random() * characters.length)
@@ -645,6 +654,7 @@ function scrambleText() {
 scrambleText();
 setInterval(scrambleText, 7000);
 </script>
+
 
     
 </body>
