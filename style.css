@@ -998,28 +998,26 @@ footer p {
     /* Cards */
     .card-grid,
     .course-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
 
     .card {
-        padding: 21px;
-        border-radius: 14px;
+        padding: 15px;
+        border-radius: 12px;
     }
 
     .card h3 {
-        font-size: 16px;
-        margin: 12px 0 10px;
+        font-size: 14px;
     }
 
     .card p {
-        font-size: 12px;
-        line-height: 1.8;
+        font-size: 11px;
+        line-height: 1.7;
     }
 
     .card small {
-        font-size: 12px;
-        line-height: 1.7;
+        font-size: 10px;
     }
 
     .status,
