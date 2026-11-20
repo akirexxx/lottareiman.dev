@@ -1,47 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotta | Cybersecurity Portfolio</title>
+    <meta name="description" content="Lotta Reiman's cybersecurity portfolio, technical projects and security learning journey.">
+    <title>Lotta Reiman | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <a href="#" class="logo">LR<span>.</span></a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-    </header>
+<header class="topbar">
+    <nav>
+        <a href="#home" class="logo">LR<span>.</span></a>
 
-    <main>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#notes">Security Notes</a>
+            <a href="#certificates">Certificates</a>
+        </div>
+    </nav>
+</header>
 
-        <section class="hero">
-            <p class="terminal">$ whoami</p>
-            <p class="role">IT SECURITY SPECIALIST STUDENT</p>
-            <h1>Lotta Reiman<span>.</span></h1>
-            <p class="intro">
-                Curious about how systems work, how they break,
-                and how to make them more secure.
-            </p>
-            <a href="#projects" class="main-button">Explore my work →</a>
-            <p class="location">Stockholm, Sweden // Open to LIA opportunities</p>
-        </section>
+<main>
 
-        
-    <section id="about" class="content-section">
-        <p class="section-number">01 / ABOUT</p>
-        <h2>$ cat about_me.txt</h2>
+    <!-- INTRODUCTION -->
 
-        <div class="terminal-text">
+    <section id="home" class="hero">
+        <div class="terminal-label">$ whoami</div>
+
+        <p class="eyebrow">IT SECURITY SPECIALIST STUDENT</p>
+
+        <h1>Lotta Reiman<span>.</span></h1>
+
+        <p class="hero-description">
+            Exploring cybersecurity through hands-on labs,
+            technical experiments and continuous learning.
+        </p>
+
+        <div class="hero-links">
+            <a href="#projects" class="primary-button">Explore my work →</a>
+            <a href="https://github.com/akirexxx" target="_blank">GitHub ↗</a>
+        </div>
+
+        <div class="hero-status">
+            <span class="status-dot"></span>
+            Based in Stockholm, Sweden · Open to LIA opportunities
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="section">
+        <div class="section-heading">
+            <span>01 / ABOUT</span>
+            <h2>$ cat about_me.txt</h2>
+        </div>
+
+        <div class="terminal-panel about-panel">
             <p>
                 During my cybersecurity studies, I have gained practical
                 experience with Windows, Linux, VMware and basic network
@@ -59,145 +78,405 @@
                 journey, I am keen to learn by experimenting, asking
                 questions and challenging my own understanding.
             </p>
+
+            <p>
+                Before entering the IT field, I spent approximately
+                ten years working within the Swedish justice system.
+                This background has shaped my ability to work
+                methodically, handle sensitive information and
+                analyze complex situations.
+            </p>
         </div>
     </section>
-    
 
-        <section id="skills" class="content-section">
-            <p class="section-number">02 / SKILLS</p>
-            <h2>Technical toolkit</h2>
-            <p class="section-description">
-                Technologies and tools I'm currently exploring and developing.
-            </p>
 
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Programming</h3>
-                    <p>Python</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Operating Systems</h3>
-                    <p>Linux · Windows · Windows Server</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Networking</h3>
-                    <p>TCP/IP · DNS · DHCP · Firewalls</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Security</h3>
-                    <p>Web Security · Burp Suite · SIEM</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Infrastructure</h3>
-                    <p>Active Directory · VMware</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools</h3>
-                    <p>Git · GitHub · TryHackMe</p>
-                </div>
-            </div>
-        </section>
+    <!-- TECHNICAL SKILLS -->
 
-        <section id="projects" class="content-section">
-            <p class="section-number">03 / PROJECTS</p>
-            <h2>Things I've been working on</h2>
-            <p class="section-description">
-                Practical projects, experiments and security labs.
-            </p>
+    <section id="skills" class="section">
+        <div class="section-heading">
+            <span>02 / TECHNICAL OVERVIEW</span>
+            <h2>Tools & Technologies</h2>
+        </div>
 
-            <div class="project-card">
-                <p class="project-type">01 // INFRASTRUCTURE</p>
+        <p class="section-intro">
+            A growing technical foundation developed through
+            coursework, personal labs and independent learning.
+        </p>
+
+        <div class="card-grid">
+
+            <article class="card">
+                <span class="status">HANDS-ON PRACTICE</span>
+                <h3>Operating Systems</h3>
+                <p>Windows · Linux · Ubuntu · Kali Linux</p>
+                <small>Basic system administration and command-line usage.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">HANDS-ON PRACTICE</span>
+                <h3>Virtualization</h3>
+                <p>VMware</p>
+                <small>Building and managing a personal virtual lab environment.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">BASIC KNOWLEDGE</span>
+                <h3>Networking</h3>
+                <p>TCP/IP · DNS · DHCP · Ports · Protocols</p>
+                <small>Basic network configuration and troubleshooting.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">HANDS-ON PRACTICE</span>
+                <h3>Infrastructure</h3>
+                <p>Windows Server · Active Directory · GPO</p>
+                <small>Working with users, groups, permissions and policies in a lab.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">HANDS-ON PRACTICE</span>
+                <h3>Web Application Security</h3>
+                <p>Burp Suite · OWASP Juice Shop</p>
+                <small>Exploring vulnerabilities in controlled environments.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">HANDS-ON PRACTICE</span>
+                <h3>SIEM & Monitoring</h3>
+                <p>Elastic · Kibana · Elastic Agent</p>
+                <small>Basic log collection, monitoring and event investigation.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">BASIC KNOWLEDGE</span>
+                <h3>Programming</h3>
+                <p>Python · pytest · Git · GitHub</p>
+                <small>Basic programming, file handling, data processing and testing.</small>
+            </article>
+
+            <article class="card">
+                <span class="status">CURRENTLY LEARNING</span>
+                <h3>Security Concepts</h3>
+                <p>SQL Injection · XSS · Authentication</p>
+                <small>Learning common vulnerabilities and security principles.</small>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="section">
+        <div class="section-heading">
+            <span>03 / PROJECTS & LABS</span>
+            <h2>Practical experience</h2>
+        </div>
+
+        <p class="section-intro">
+            Personal projects, lab environments and practical exercises.
+        </p>
+
+        <div class="card-grid">
+
+            <article class="card project-card">
+                <span class="project-type">01 // INFRASTRUCTURE</span>
+                <h3>Virtual Lab Environment</h3>
+                <p>
+                    Built a virtual lab using VMware with Windows Server,
+                    a Windows client, Ubuntu Server and Kali Linux.
+                    Used the environment to explore networking,
+                    system administration and security tools.
+                </p>
+                <div class="tags">
+                    <span>VMware</span>
+                    <span>Windows</span>
+                    <span>Linux</span>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <span class="project-type">02 // SYSTEM ADMINISTRATION</span>
                 <h3>Active Directory Lab</h3>
                 <p>
-                    Building and configuring a Windows Server environment
-                    with Active Directory, users, groups, permissions
-                    and Group Policy.
+                    Practiced configuring Active Directory, user accounts,
+                    security groups, permissions, DNS and Group Policy
+                    in a simulated company environment.
                 </p>
                 <div class="tags">
                     <span>Windows Server</span>
                     <span>Active Directory</span>
-                    <span>Networking</span>
+                    <span>GPO</span>
                 </div>
-            </div>
+            </article>
 
-
-<div class="project-card">
-    <p class="project-type">04 // WEB APPLICATION SECURITY</p>
-    <h3>OWASP Juice Shop</h3>
-
-    <p>
-        Practiced identifying and exploiting web application
-        vulnerabilities in a controlled environment.
-        Worked with SQL injection challenges and explored
-        how vulnerable applications can expose sensitive data.
-    </p>
-
-    <p>
-        Investigated extracted password hashes and practiced
-        password cracking using John the Ripper and the
-        RockYou wordlist.
-    </p>
-
-    <div class="tags">
-        <span>OWASP Juice Shop</span>
-        <span>SQL Injection</span>
-        <span>Burp Suite</span>
-        <span>John the Ripper</span>
-    </div>
-</div>
-
-
-            <div class="project-card">
-                <p class="project-type">03 // SECURITY LABS</p>
-                <h3>Web Security & Vulnerability Testing</h3>
+            <article class="card project-card">
+                <span class="project-type">03 // SECURITY MONITORING</span>
+                <h3>SIEM Home Lab</h3>
                 <p>
-                    Exploring web application security and learning
-                    to identify and understand common vulnerabilities
-                    in controlled lab environments.
+                    Set up an Elastic and Kibana environment to collect
+                    system events and explore security monitoring,
+                    log collection and event analysis.
                 </p>
                 <div class="tags">
-                    <span>Burp Suite</span>
-                    <span>OWASP</span>
-                    <span>Web Security</span>
+                    <span>Elastic</span>
+                    <span>Kibana</span>
+                    <span>Elastic Agent</span>
                 </div>
-            </div>
-        </section>
+            </article>
 
-        <section id="education" class="content-section">
-            <p class="section-number">04 / EDUCATION</p>
-            <h2>Learning & development</h2>
-            <div class="education-item">
-                <h3>IT Security Specialist</h3>
-                <p>IT-Högskolan · 2026–2028</p>
-                <span>Ongoing</span>
-            </div>
-            <div class="education-item">
+            <article class="card project-card">
+                <span class="project-type">04 // WEB APPLICATION SECURITY</span>
+                <h3>OWASP Juice Shop</h3>
+                <p>
+                    Explored web application vulnerabilities in a
+                    controlled lab environment. Practiced SQL injection,
+                    inspected HTTP responses and investigated exposed
+                    password hashes.
+                </p>
+                <p>
+                    Also experimented with hash identification and
+                    password cracking using John the Ripper and
+                    the RockYou wordlist.
+                </p>
+                <div class="tags">
+                    <span>OWASP</span>
+                    <span>Burp Suite</span>
+                    <span>SQL Injection</span>
+                    <span>John the Ripper</span>
+                </div>
+            </article>
+
+            <article class="card project-card">
+                <span class="project-type">05 // PROGRAMMING</span>
+                <h3>Python Projects</h3>
+                <p>
+                    Developed small Python applications involving
+                    file parsing, JSON, CSV, data processing,
+                    functions, classes and automated testing with pytest.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>pytest</span>
+                    <span>Git</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- SECURITY NOTES -->
+
+    <section id="notes" class="section">
+        <div class="section-heading">
+            <span>04 / SECURITY NOTES</span>
+            <h2>$ ls ./security-notes/</h2>
+        </div>
+
+        <p class="section-intro">
+            Technical concepts, notes and lessons learned
+            throughout my cybersecurity journey.
+        </p>
+
+        <div class="card-grid">
+
+            <article class="card note-card">
+                <span class="note-category">WEB SECURITY</span>
+                <h3>SQL Injection</h3>
+                <p>
+                    Understanding how improperly handled user input
+                    can manipulate database queries.
+                </p>
+                <span class="note-status">PRACTICED IN LAB</span>
+            </article>
+
+            <article class="card note-card">
+                <span class="note-category">WEB SECURITY</span>
+                <h3>Cross-Site Scripting (XSS)</h3>
+                <p>
+                    Learning how malicious scripts can be injected
+                    into web pages and executed in a user's browser.
+                </p>
+                <span class="note-status">LEARNING</span>
+            </article>
+
+            <article class="card note-card">
+                <span class="note-category">WEB SECURITY</span>
+                <h3>Cross-Site Request Forgery</h3>
+                <p>
+                    Exploring how attackers can trick authenticated
+                    users into performing unwanted actions.
+                </p>
+                <span class="note-status">LEARNING</span>
+            </article>
+
+            <article class="card note-card">
+                <span class="note-category">NETWORK SECURITY</span>
+                <h3>Network Fundamentals</h3>
+                <p>
+                    Exploring TCP/IP, DNS, ports, protocols
+                    and basic network communication.
+                </p>
+                <span class="note-status">BASIC KNOWLEDGE</span>
+            </article>
+
+            <article class="card note-card">
+                <span class="note-category">SECURITY MONITORING</span>
+                <h3>SIEM & Log Analysis</h3>
+                <p>
+                    Exploring how system events can be collected,
+                    monitored and investigated using SIEM tools.
+                </p>
+                <span class="note-status">HANDS-ON PRACTICE</span>
+            </article>
+
+            <article class="card note-card">
+                <span class="note-category">APPLICATION SECURITY</span>
+                <h3>Command Injection</h3>
+                <p>
+                    Learning how unsafe handling of user input
+                    can lead to unintended command execution.
+                </p>
+                <span class="note-status">LEARNING</span>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- COURSES AND CERTIFICATES -->
+
+    <section id="certificates" class="section">
+        <div class="section-heading">
+            <span>05 / COURSES & CERTIFICATES</span>
+            <h2>Continuous learning</h2>
+        </div>
+
+        <p class="section-intro">
+            Courses and certificates completed as part of my
+            independent learning and professional development.
+        </p>
+
+        <div class="card-grid">
+
+            <article class="card certificate-card">
+                <span class="certificate-label">LINKEDIN LEARNING</span>
+                <h3>Certificate 01</h3>
+                <p>Completed course · LinkedIn Learning</p>
+                <a href="https://www.linkedin.com/learning/certificates/f7fa2e46bacfd96b695e9aadc1de1164232b2b6137383a9bad97b683a25d164e"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+            </article>
+
+            <article class="card certificate-card">
+                <span class="certificate-label">LINKEDIN LEARNING</span>
+                <h3>Certificate 02</h3>
+                <p>Completed course · LinkedIn Learning</p>
+                <a href="https://www.linkedin.com/learning/certificates/64031aaa9be9aab1a9325efab17d0f02b43d36e3f76c532eabe5e5ab8d468024"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+            </article>
+
+            <article class="card certificate-card">
+                <span class="certificate-label">LINKEDIN LEARNING</span>
+                <h3>Certificate 03</h3>
+                <p>Completed course · LinkedIn Learning</p>
+                <a href="https://www.linkedin.com/learning/certificates/5982128abbd567606605f03ebd5221bb23be85c78b983248544a295454e215d4"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+            </article>
+
+            <article class="card certificate-card">
+                <span class="certificate-label">LINKEDIN LEARNING</span>
+                <h3>Certificate 04</h3>
+                <p>Completed course · LinkedIn Learning</p>
+                <a href="https://www.linkedin.com/learning/certificates/1e7ce4999ccb21c8cb54b98920d3e02cb130e25c2bf19a98cdc802c107066c5d"
+                   target="_blank" rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+            </article>
+
+            <article class="card certificate-card">
+                <span class="certificate-label">TRYHACKME</span>
                 <h3>Cybersecurity Training</h3>
-                <p>TryHackMe · Hands-on security learning</p>
-            </div>
-            <div class="education-item">
+                <p>
+                    Hands-on learning through cybersecurity
+                    exercises and learning paths.
+                </p>
+                <a href="https://tryhackme.com/" target="_blank" rel="noopener noreferrer">
+                    Visit TryHackMe ↗
+                </a>
+            </article>
+
+            <article class="card certificate-card">
+                <span class="certificate-label">HACK THE BOX</span>
                 <h3>Security Monitoring and SIEM Fundamentals</h3>
-                <p>Hack The Box Academy</p>
-            </div>
-        </section>
+                <p>
+                    Learning about security monitoring
+                    and SIEM fundamentals.
+                </p>
+                <a href="https://academy.hackthebox.com/" target="_blank" rel="noopener noreferrer">
+                    Visit HTB Academy ↗
+                </a>
+            </article>
 
-        <section id="contact" class="content-section contact-section">
-            <p class="section-number">05 / CONTACT</p>
-            <h2>Let's connect.</h2>
-            <p>
-                Interested in cybersecurity, security research
-                or potential LIA opportunities?
-            </p>
-            <a href="https://github.com/akirexxx" target="_blank">GitHub ↗</a>
-            <a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
-        </section>
+        </div>
+    </section>
 
-    </main>
 
-    <footer>
-        <p>© 2026 Lotta Reiman · Built while learning.</p>
-        <p>STATUS: LEARNING & BUILDING</p>
-    </footer>
+    <!-- EDUCATION -->
+
+    <section id="education" class="section">
+        <div class="section-heading">
+            <span>06 / EDUCATION</span>
+            <h2>Academic background</h2>
+        </div>
+
+        <div class="card education-card">
+            <span class="status">CURRENTLY STUDYING</span>
+            <h3>IT Security Specialist</h3>
+            <p>IT-Högskolan · Stockholm</p>
+            <small>2026 – 2028</small>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="section contact-section">
+        <div class="section-heading">
+            <span>07 / CONTACT</span>
+            <h2>$ connect --with me</h2>
+        </div>
+
+        <p>
+            Interested in cybersecurity, security research
+            or potential LIA opportunities? Feel free to connect.
+        </p>
+
+        <div class="contact-links">
+            <a href="https://github.com/akirexxx" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <p>© 2026 Lotta Reiman</p>
+    <p>STATUS: LEARNING · BUILDING · EXPLORING</p>
+</footer>
 
 </body>
 </html>
+
