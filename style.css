@@ -48,7 +48,7 @@ body::before {
             rgba(8, 7, 12, 0.48),
             rgba(8, 7, 12, 0.82)
         ),
-        url("images/backround_purple.jpg") center center / cover no-repeat;
+        url("images/black.jpg") center center / cover no-repeat;
     filter: brightness(0.75) saturate(1.15);
 }
 
