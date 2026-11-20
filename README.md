@@ -1,1 +1,2 @@
-# https://lottareiman.dev/
+# lottareiman.dev
+## akirexxx.github.io
