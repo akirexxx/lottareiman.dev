@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,72 +7,128 @@
     <meta name="description" content="Lotta Reiman's cybersecurity portfolio, technical projects and security learning journey.">
     <title>Lotta Reiman | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header class="topbar">
-    <nav>
-        <a href="#home" class="logo">LR<span>.</span></a>
+    <nav class="nav-container">
+        <a href="index.html" class="logo">cat portfolio<span>.</span></a>
 
         <div class="nav-links">
-            <a href="#about">About</a>
+            <a href="#home">Home</a>
+            <a href="#about">Background</a>
+            <a href="#education">Education</a>
+            <a href="projects.html">Projects</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#notes">Security Notes</a>
-            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
         </div>
+
+        <a href="#contact" class="nav-contact">LET'S CONNECT</a>
     </nav>
 </header>
 
 <main>
 
-    <!-- INTRODUCTION -->
+    <!-- HERO -->
 
-    <section id="home" class="hero">
-        <div class="terminal-label">$ whoami</div>
+    <section class="hero" id="home">
 
-        <p class="eyebrow">IT SECURITY SPECIALIST STUDENT</p>
+        <div class="hero-left">
+            <span class="terminal-label">$ whoami</span>
 
-        <h1 class="scramble-text">
-            <span class="first-name">lotta</span>
-            <span class="last-name">reiman</span>
-        </h1>
+            <p class="eyebrow">IT SECURITY SPECIALIST STUDENT</p>
 
-        <p class="hero-description">
-            Currently studying IT Security at IT-Högskolan in Stockholm, while 
-            developing my technical skills through hands-on labs, personal projects 
-            and continuous learning. Exploring cybersecurity, from networking and 
-            system administration to security monitoring and web application security.
+            <h1 class="hero-title">
+                <span class="first-name">LOTTA</span>
+                <span class="last-name">REIMAN</span>
+            </h1>
 
-            Thank you for taking the time to explore my portfolio. 
-        </p>
+            <p class="hero-description">
+                Currently studying IT Security at IT-Högskolan in Stockholm,
+                while developing my technical skills through hands-on labs,
+                personal projects and continuous learning.
+            </p>
 
-        <div class="hero-links">
-            <a href="#projects" class="primary-button">Explore my work →</a>
-            <a href="https://github.com/akirexxx" target="_blank">GitHub ↗</a>
+            <div class="hero-tags">
+                <span>CYBERSECURITY</span>
+                <span>SECURITY MONITORING</span>
+                <span>WEB SECURITY</span>
+            </div>
+
+            <div class="hero-links">
+                <a href="projects.html" class="primary-button">
+                    EXPLORE PROJECTS ↗
+                </a>
+                <a href="https://github.com/akirexxx" target="_blank" rel="noopener noreferrer" class="text-link">
+                    GITHUB ↗
+                </a>
+            </div>
+
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                Based in Stockholm, Sweden · Open to LIA opportunities
+            </div>
         </div>
 
-        <div class="hero-status">
-            <span class="status-dot"></span>
-            Based in Stockholm, Sweden · Open to LIA opportunities
-        </div>
+        <!-- INTRODUCTION CARD -->
+
+        <aside class="profile-card">
+            <div class="profile-image">
+                <img src="images/grey.jpg" alt="Black and white portrait of Lotta Reiman">
+            </div>
+
+            <div class="profile-information">
+                <span class="card-label">PROFILE / 001</span>
+
+                <h2>Lotta Reiman</h2>
+
+                <p class="profile-location">BASED IN STOCKHOLM, SWEDEN</p>
+
+                <p class="profile-description">
+                    I combine a structured approach with curiosity and
+                    a growing technical foundation in cybersecurity.
+                    My focus is on understanding how systems work,
+                    identifying vulnerabilities and developing
+                    practical security skills.
+                </p>
+
+                <div class="profile-details">
+                    <div>
+                        <span>BACKGROUND</span>
+                        <strong>10 YEARS</strong>
+                        <small>Swedish justice system</small>
+                    </div>
+
+                    <div>
+                        <span>FOCUS</span>
+                        <strong>CYBERSECURITY</strong>
+                        <small>Security & infrastructure</small>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
     </section>
 
 
     <!-- ABOUT -->
 
     <section id="about" class="section">
+
         <div class="section-heading">
-            <span>01 / ABOUT</span>
-            <h2>$ cat about_me.txt</h2>
+            <span>02 / ABOUT</span>
+            <h2>Background & approach</h2>
         </div>
 
-        <div class="terminal-panel about-panel">
+        <div class="about-panel">
             <p>
                 During my cybersecurity studies, I have gained practical
-                experience with Python, Windows, Linux, VMware and basic network
-                configuration.
+                experience with Python, Windows, Linux, VMware and basic
+                network configuration.
             </p>
 
             <p>
@@ -97,17 +154,79 @@
     </section>
 
 
-    <!-- TECHNICAL SKILLS -->
+    <!-- EDUCATION -->
+
+    <section class="section" id="education">
+
+        <div class="section-heading">
+            <span>01 / EDUCATION & RESOURCES</span>
+            <h2>Learning journey</h2>
+        </div>
+
+        <p class="section-intro">
+            My education, courses and ongoing technical development.
+        </p>
+
+        <div class="education-list">
+
+            <div class="education-row">
+                <div class="education-name">Network</div>
+                <div class="education-provider">IT-Högskolan</div>
+                <div class="education-date">2026-11-16 – 2026-12-20</div>
+                <div class="education-status ongoing">Ongoing</div>
+            </div>
+
+            <div class="education-row">
+                <div class="education-name">Python</div>
+                <div class="education-provider">IT-Högskolan</div>
+                <div class="education-date">2026-10-19 – 2026-11-15</div>
+                <div class="education-status completed">Completed</div>
+            </div>
+
+            <div class="education-row">
+                <div class="education-name">Operating Systems: Linux and Windows</div>
+                <div class="education-provider">IT-Högskolan</div>
+                <div class="education-date">2026-08-31 – 2026-10-18</div>
+                <div class="education-status completed">Completed</div>
+            </div>
+
+            <div class="education-row">
+                <div class="education-name">IT Security Specialist (YH)</div>
+                <div class="education-provider">IT-Högskolan</div>
+                <div class="education-date">2026-08-24 – 2028-04-28</div>
+                <div class="education-status education">Education</div>
+            </div>
+
+            <div class="education-row">
+                <div class="education-name">Computer and Communication Technology</div>
+                <div class="education-provider">NTI-skolan</div>
+                <div class="education-date">2025-09-08 – 2025-11-14</div>
+                <div class="education-status completed">Completed</div>
+            </div>
+
+            <div class="education-row">
+                <div class="education-name">Programming 1 (C#)</div>
+                <div class="education-provider">NTI-skolan</div>
+                <div class="education-date">2026-01-05 – 2026-03-13</div>
+                <div class="education-status completed">Completed</div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
 
     <section id="skills" class="section">
+
         <div class="section-heading">
-            <span>02 / TECHNICAL OVERVIEW</span>
+            <span>03 / TECHNICAL OVERVIEW</span>
             <h2>Tools & Technologies</h2>
         </div>
 
         <p class="section-intro">
-            A growing technical foundation developed through
-            coursework, personal labs and independent learning.
+            A growing technical foundation developed through coursework,
+            personal labs and independent learning.
         </p>
 
         <div class="card-grid">
@@ -172,118 +291,18 @@
     </section>
 
 
-    <!-- PROJECTS -->
-
-    <section id="projects" class="section">
-        <div class="section-heading">
-            <span>03 / PROJECTS & LABS</span>
-            <h2>Practical experience</h2>
-        </div>
-
-        <p class="section-intro">
-            Personal projects, lab environments and practical exercises.
-        </p>
-
-        <div class="card-grid">
-
-            <article class="card project-card">
-                <span class="project-type">01 // INFRASTRUCTURE</span>
-                <h3>Virtual Lab Environment</h3>
-                <p>
-                    Built a virtual lab using VMware with Windows Server,
-                    a Windows client, Ubuntu Server and Kali Linux.
-                    Used the environment to explore networking,
-                    system administration and security tools.
-                </p>
-                <div class="tags">
-                    <span>VMware</span>
-                    <span>Windows</span>
-                    <span>Linux</span>
-                </div>
-            </article>
-
-            <article class="card project-card">
-                <span class="project-type">02 // SYSTEM ADMINISTRATION</span>
-                <h3>Active Directory Lab</h3>
-                <p>
-                    Practiced configuring Active Directory, user accounts,
-                    security groups, permissions, DNS and Group Policy
-                    in a simulated company environment.
-                </p>
-                <div class="tags">
-                    <span>Windows Server</span>
-                    <span>Active Directory</span>
-                    <span>GPO</span>
-                </div>
-            </article>
-
-            <article class="card project-card">
-                <span class="project-type">03 // SECURITY MONITORING</span>
-                <h3>SIEM Home Lab</h3>
-                <p>
-                    Set up an Elastic and Kibana environment to collect
-                    system events and explore security monitoring,
-                    log collection and event analysis.
-                </p>
-                <div class="tags">
-                    <span>Elastic</span>
-                    <span>Kibana</span>
-                    <span>Elastic Agent</span>
-                </div>
-            </article>
-
-            <article class="card project-card">
-                <span class="project-type">04 // WEB APPLICATION SECURITY</span>
-                <h3>OWASP Juice Shop</h3>
-                <p>
-                    Explored web application vulnerabilities in a
-                    controlled lab environment. Practiced SQL injection,
-                    inspected HTTP responses and investigated exposed
-                    password hashes.
-                </p>
-                <p>
-                    Also experimented with argument and option
-                    injection, privilege escalation and more in
-                    accordance with OWASP Juice Shop score board.
-                </p>
-                <div class="tags">
-                    <span>OWASP</span>
-                    <span>Burp Suite</span>
-                    <span>SQL Injection</span>
-                    <span>Argument injection</span>
-                </div>
-            </article>
-
-            <article class="card project-card">
-                <span class="project-type">05 // PROGRAMMING</span>
-                <h3>Python Projects</h3>
-                <p>
-                    Developed small Python applications involving
-                    file parsing, JSON, CSV, data processing,
-                    functions, classes and automated testing with pytest.
-                </p>
-                <div class="tags">
-                    <span>Python</span>
-                    <span>pytest</span>
-                    <span>Git</span>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-
     <!-- SECURITY NOTES -->
 
     <section id="notes" class="section">
+
         <div class="section-heading">
             <span>04 / SECURITY NOTES</span>
-            <h2>$ ls ./security-notes/</h2>
+            <h2>Security concepts</h2>
         </div>
 
         <p class="section-intro">
-            Technical concepts, notes and lessons learned
-            throughout my cybersecurity journey.
+            Technical concepts, notes and lessons learned throughout
+            my cybersecurity journey.
         </p>
 
         <div class="card-grid">
@@ -291,60 +310,42 @@
             <article class="card note-card">
                 <span class="note-category">WEB SECURITY</span>
                 <h3>SQL Injection</h3>
-                <p>
-                    Understanding how improperly handled user input
-                    can manipulate database queries.
-                </p>
+                <p>Understanding how improperly handled user input can manipulate database queries.</p>
                 <span class="note-status">PRACTICED IN LAB</span>
             </article>
 
             <article class="card note-card">
                 <span class="note-category">WEB SECURITY</span>
                 <h3>Cross-Site Scripting (XSS)</h3>
-                <p>
-                    Learning how malicious scripts can be injected
-                    into web pages and executed in a user's browser.
-                </p>
+                <p>Learning how malicious scripts can be injected into web pages and executed in a user's browser.</p>
                 <span class="note-status">LEARNING</span>
             </article>
 
             <article class="card note-card">
                 <span class="note-category">WEB SECURITY</span>
                 <h3>Cross-Site Request Forgery</h3>
-                <p>
-                    Exploring how attackers can trick authenticated
-                    users into performing unwanted actions.
-                </p>
+                <p>Exploring how attackers can trick authenticated users into performing unwanted actions.</p>
                 <span class="note-status">LEARNING</span>
             </article>
 
             <article class="card note-card">
                 <span class="note-category">NETWORK SECURITY</span>
                 <h3>Network Fundamentals</h3>
-                <p>
-                    Exploring TCP/IP, DNS, ports, protocols
-                    and basic network communication.
-                </p>
+                <p>Exploring TCP/IP, DNS, ports, protocols and basic network communication.</p>
                 <span class="note-status">BASIC KNOWLEDGE</span>
             </article>
 
             <article class="card note-card">
                 <span class="note-category">SECURITY MONITORING</span>
                 <h3>SIEM & Log Analysis</h3>
-                <p>
-                    Exploring how system events can be collected,
-                    monitored and investigated using SIEM tools.
-                </p>
+                <p>Exploring how system events can be collected, monitored and investigated using SIEM tools.</p>
                 <span class="note-status">HANDS-ON PRACTICE</span>
             </article>
 
             <article class="card note-card">
                 <span class="note-category">APPLICATION SECURITY</span>
                 <h3>Command Injection</h3>
-                <p>
-                    Learning how unsafe handling of user input
-                    can lead to unintended command execution.
-                </p>
+                <p>Learning how unsafe handling of user input can lead to unintended command execution.</p>
                 <span class="note-status">LEARNING</span>
             </article>
 
@@ -352,200 +353,108 @@
     </section>
 
 
-<!-- COURSES AND CERTIFICATES -->
+    <!-- COURSES -->
 
-<section id="certificates" class="section">
+    <section id="certificates" class="section">
 
-    <div class="section-heading">
-        <span>05 / COURSES & CERTIFICATES</span>
-        <h2>Continuous learning</h2>
-    </div>
+        <div class="section-heading">
+            <span>05 / COURSES & CERTIFICATES</span>
+            <h2>Continuous learning</h2>
+        </div>
 
-    <p class="section-intro">
-        Completed courses and continuous learning through
-        LinkedIn Learning and other platforms.
-    </p>
+        <p class="section-intro">
+            Completed courses and continuous learning through
+            LinkedIn Learning and other platforms.
+        </p>
 
-    <h3 class="course-group-title">Completed courses</h3>
+        <h3 class="course-group-title">COMPLETED COURSES</h3>
 
-    <div class="course-grid">
+        <div class="course-grid">
 
-        <!-- Web Security -->
-
-        <article class="course-card">
-            <img src="images/computer.jpg"
-                 alt="Programming Foundations: Web Security">
-
-            <div class="course-info">
-                <span class="course-platform">LINKEDIN LEARNING</span>
-                <h3>Programming Foundations: Web Security</h3>
-                <p>Instructor: Kevin Skoglund</p>
-
-                <div class="course-meta">
-                    <span class="completed">✓ Completed</span>
-                    <span>14 October 2026</span>
-                    <span>Duration: 2h 11m</span>
+            <article class="course-card">
+                <img src="images/computer.jpg" alt="Programming Foundations: Web Security">
+                <div class="course-info">
+                    <span class="course-platform">LINKEDIN LEARNING</span>
+                    <h3>Programming Foundations: Web Security</h3>
+                    <p>Instructor: Kevin Skoglund</p>
+                    <div class="course-meta">
+                        <span class="completed">✓ Completed</span>
+                        <span>14 October 2026</span>
+                        <span>Duration: 2h 11m</span>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
-
-        <!-- Python -->
-
-        <article class="course-card">
-            <img src="images/python.jpg"
-                 alt="Python for Non-Programmers">
-
-            <div class="course-info">
-                <span class="course-platform">LINKEDIN LEARNING</span>
-                <h3>Python for Non-Programmers</h3>
-                <p>Instructor: Nick Walter</p>
-
-                <div class="course-meta">
-                    <span class="completed">✓ Completed</span>
-                    <span>29 August 2026</span>
-                    <span>Duration: 2h 11m</span>
+            <article class="course-card">
+                <img src="images/python.jpg" alt="Python for Non-Programmers">
+                <div class="course-info">
+                    <span class="course-platform">LINKEDIN LEARNING</span>
+                    <h3>Python for Non-Programmers</h3>
+                    <p>Instructor: Nick Walter</p>
+                    <div class="course-meta">
+                        <span class="completed">✓ Completed</span>
+                        <span>29 August 2026</span>
+                        <span>Duration: 2h 11m</span>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
-
-        <!-- Linux -->
-
-        <article class="course-card">
-            <img src="images/OIP.webp"
-                 alt="Learning Linux Command Line">
-
-            <div class="course-info">
-                <span class="course-platform">LINKEDIN LEARNING</span>
-                <h3>Learning Linux Command Line</h3>
-                <p>Instructor: Scott Simpson</p>
-
-                <div class="course-meta">
-                    <span class="completed">✓ Completed</span>
-                    <span>6 September 2026</span>
-                    <span>Duration: 3h 4m</span>
+            <article class="course-card">
+                <img src="images/OIP.webp" alt="Learning Linux Command Line">
+                <div class="course-info">
+                    <span class="course-platform">LINKEDIN LEARNING</span>
+                    <h3>Learning Linux Command Line</h3>
+                    <p>Instructor: Scott Simpson</p>
+                    <div class="course-meta">
+                        <span class="completed">✓ Completed</span>
+                        <span>6 September 2026</span>
+                        <span>Duration: 3h 4m</span>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
-
-        <!-- SIEM -->
-
-        <article class="course-card">
-            <img src="images/security-monitoring-siem.jpg"
-                 alt="Security Monitoring and SIEM Fundamentals">
-
-            <div class="course-info">
-                <span class="course-platform">LINKEDIN LEARNING · HACK THE BOX</span>
-                <h3>Security Monitoring and SIEM Fundamentals: Cybersecurity Labs Powered by Hack The Box</h3>
-                <p>Instructor: Hack The Box</p>
-
-                <div class="course-meta">
-                    <span class="completed">✓ Completed</span>
-                    <span>30 August 2026</span>
-                    <span>Duration: 5h 34m</span>
+            <article class="course-card">
+                <img src="images/security-monitoring-siem.jpg" alt="Security Monitoring and SIEM Fundamentals">
+                <div class="course-info">
+                    <span class="course-platform">LINKEDIN LEARNING · HACK THE BOX</span>
+                    <h3>Security Monitoring and SIEM Fundamentals: Cybersecurity Labs Powered by Hack The Box</h3>
+                    <p>Instructor: Hack The Box</p>
+                    <div class="course-meta">
+                        <span class="completed">✓ Completed</span>
+                        <span>30 August 2026</span>
+                        <span>Duration: 5h 34m</span>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
-    </div>
-
-</section>
-
-        <!-- TryHackMe -->
-
-        <article class="course-card">
-            <img src="images/tryhackme.png"
-                 alt="Pre Security learning path">
-
-            <div class="course-info">
-                <span class="course-platform">TRYHACKME</span>
-                <h3>TryHackMe Pre Security path</h3>
-                <p>Instructor: TryHackMe</p>
-
-                <div class="course-meta">
-                    <span class="completed">✓ Completed</span>
-                    <span>22 October 2026</span>
-                    <span>Estimated time: 20h </span>
-                    <span>Modules: 7 </span>
-                    <span>Hands-on labs: 31 </span>
+            <article class="course-card">
+                <img src="images/tryhackme.png" alt="TryHackMe Pre Security learning path">
+                <div class="course-info">
+                    <span class="course-platform">TRYHACKME</span>
+                    <h3>TryHackMe Pre Security Path</h3>
+                    <p>Platform: TryHackMe</p>
+                    <div class="course-meta">
+                        <span class="completed">✓ Completed</span>
+                        <span>22 October 2026</span>
+                        <span>Estimated time: 20h</span>
+                        <span>Modules: 7</span>
+                        <span>Hands-on labs: 31</span>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </article>
 
-<!-- EDUCATION & RESOURCES -->
-
-<section class="section education-section" id="education">
-
-    <div class="section-heading">
-        <span>03 / EDUCATION & RESOURCES</span>
-        <h2>Learning journey</h2>
-    </div>
-
-    <div class="education-list">
-
-        <!-- IT-Högskolan -->
-
-        <div class="education-row">
-            <div class="education-name">Network</div>
-            <div class="education-provider">IT-Högskolan</div>
-            <div class="education-date">2026-11-16 – 2026-12-20</div>
-            <div class="education-status ongoing">Ongoing</div>
         </div>
-
-        <div class="education-row">
-            <div class="education-name">Python</div>
-            <div class="education-provider">IT-Högskolan</div>
-            <div class="education-date">2026-10-19 – 2026-11-15</div>
-            <div class="education-status completed">Completed</div>
-        </div>
-
-        <div class="education-row">
-            <div class="education-name">Operating Systems: Linux and Windows</div>
-            <div class="education-provider">IT-Högskolan</div>
-            <div class="education-date">2026-08-31 – 2026-10-18</div>
-            <div class="education-status completed">Completed</div>
-        </div>
-
-        <div class="education-row">
-            <div class="education-name">IT Security Specialist (YH)</div>
-            <div class="education-provider">IT-Högskolan</div>
-            <div class="education-date">2026-08-24 – 2028-04-28</div>
-            <div class="education-status education">Education</div>
-        </div>
-
-        <!-- NTI-skolan -->
-
-        <div class="education-row">
-            <div class="education-name">Computer and Communication Technology</div>
-            <div class="education-provider">NTI-skolan</div>
-            <div class="education-date">2025-09-08 – 2025-11-14</div>
-            <div class="education-status completed">Completed</div>
-        </div>
-
-        <div class="education-row">
-            <div class="education-name">Programming 1 (C#)</div>
-            <div class="education-provider">NTI-skolan</div>
-            <div class="education-date">2026-01-05 – 2026-03-13</div>
-            <div class="education-status completed">Completed</div>
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
+    <!-- CONTACT -->
 
-<!-- CONTACT -->
+    <section class="section contact-section" id="contact">
 
-<section class="section contact-section" id="contact">
-    <div class="contact-card">
-
-        <div class="contact-content">
+        <div class="contact-card">
             <div class="section-heading">
-                <span>07 / CONTACT</span>
-                <h2>$ connect --with me</h2>
+                <span>06 / CONTACT</span>
+                <h2>connect --with me</h2>
             </div>
 
             <p>
@@ -564,21 +473,14 @@
             </div>
         </div>
 
-        <div class="contact-image">
-            <img src="images/profilepicture.png" alt="Portrait of Lotta">
-        </div>
-
-    </div>
-</section>
+    </section>
 
 </main>
-
 
 <footer>
     <p>© 2026 Lotta Reiman · All rights reserved</p>
     <p>STATUS: LEARNING · BUILDING · EXPLORING</p>
 </footer>
-
 
 <script>
 const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
@@ -589,72 +491,77 @@ function scrambleText() {
 
     if (!firstName || !lastName) return;
 
-    const original = ["lotta", "reiman"];
-    const elements = [firstName, lastName];
+    const words = [
+        { element: firstName, text: "LOTTA" },
+        { element: lastName, text: "REIMAN" }
+    ];
 
-    let iteration = 0;
-    const revealed = Array(11).fill(false);
-
-    elements.forEach((element, wordIndex) => {
+    words.forEach(({ element, text }) => {
         element.innerHTML = "";
 
-        for (let i = 0; i < original[wordIndex].length; i++) {
+        [...text].forEach(() => {
             const span = document.createElement("span");
-
             span.textContent = characters[
                 Math.floor(Math.random() * characters.length)
             ];
-
+            span.classList.add("scramble-flash");
             element.appendChild(span);
-        }
+        });
     });
 
+    let iteration = 0;
+
     const interval = setInterval(() => {
+        words.forEach(({ element, text }) => {
+            [...text].forEach((letter, index) => {
+                const span = element.children[index];
 
-        original.forEach((word, wordIndex) => {
-            const spans = elements[wordIndex].querySelectorAll("span");
-
-            word.split("").forEach((letter, index) => {
-                const position = wordIndex === 0
-                    ? index
-                    : index + original[0].length;
-
-                if (position < iteration) {
-                    if (!revealed[position]) {
-                        revealed[position] = true;
-
-                        const span = spans[index];
-
-                        // Visa rätt bokstav direkt i vitt
-                        span.classList.remove("scramble-flash");
-                        span.textContent = letter;
-                    }
+                if (index < iteration) {
+                    span.textContent = letter;
+                    span.classList.remove("scramble-flash");
                 } else {
-                    const span = spans[index];
-
-                    // Slumpmässiga symboler lyser orange
-                    span.classList.add("scramble-flash");
-
                     span.textContent = characters[
                         Math.floor(Math.random() * characters.length)
                     ];
+                    span.classList.add("scramble-flash");
                 }
             });
         });
 
-        iteration += 0.25;
+        iteration += 0.35;
 
-        if (iteration >= 11) {
+        if (iteration >= 6) {
             clearInterval(interval);
         }
-
-    }, 50);
+    }, 65);
 }
 
 scrambleText();
-setInterval(scrambleText, 7000);
+setInterval(scrambleText, 8000);
 </script>
-    
+
+<script>
+const sections = document.querySelectorAll("main section[id]");
+const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        navLinks.forEach((link) => {
+            link.classList.toggle(
+                "active",
+                link.getAttribute("href") === `#${entry.target.id}`
+            );
+        });
+    });
+}, {
+    rootMargin: "-30% 0px -60% 0px"
+});
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+
 </body>
 </html>
-
