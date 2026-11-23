@@ -134,7 +134,7 @@
             </p>
 
             <p>
-                II enjoy learning by doing and continuously expanding my technical knowledge. 
+                I enjoy learning by doing and continuously expanding my technical knowledge. 
                 I have built my own virtual lab environment, worked with SIEM solutions, explored 
                 web application security through OWASP Juice Shop and developed my skills through 
                 platforms such as TryHackMe and LinkedIn Learning.
@@ -142,10 +142,10 @@
 
             <p>
                 Before transitioning into IT, I spent approximately ten years working within the 
-                Swedish justice system. This experience has shaped me into a structured, analytical 
-                and detail-oriented professional, with a strong sense of responsibility and experience 
-                handling sensitive information. I bring that same approach to my development within 
-                cybersecurity.
+                Swedish justice system as an administrative officer / court officer. This experience has 
+                shaped me into a structured, analytical and detail-oriented professional, with a strong 
+                sense of responsibility and experience handling sensitive information. I bring that same 
+                approach to my development within cybersecurity.
             </p>
 
             <p>
@@ -449,33 +449,63 @@
     </section>
 
 
-    <!-- CONTACT -->
+  
+<!-- CONTACT -->
 
-    <section class="section contact-section" id="contact">
+<section class="section contact-section" id="contact">
 
-        <div class="contact-card">
-            <div class="section-heading">
-                <span>06 / CONTACT</span>
-                <h2>connect --with me</h2>
-            </div>
+    <div class="contact-card">
 
-            <p>
-                Interested in cybersecurity, security research or potential
-                LIA opportunities? Feel free to connect.
-            </p>
-
-            <div class="contact-links">
-                <a href="https://github.com/akirexxx" target="_blank" rel="noopener noreferrer">
-                    GitHub ↗
-                </a>
-
-                <a href="https://www.linkedin.com/in/lotta-reiman-6a73a01a0/" target="_blank" rel="noopener noreferrer">
-                    LinkedIn ↗
-                </a>
-            </div>
+        <div class="section-heading">
+            <span>06 / CONTACT</span>
+            <h2>connect --with me</h2>
         </div>
 
-    </section>
+        <p>
+            Interested in cybersecurity, security research or potential
+            LIA opportunities? Feel free to connect.
+        </p>
+
+        <!-- LIA AVAILABILITY -->
+        <div class="contact-availability">
+
+            <span class="status-dot"></span>
+            <span>OPEN TO LIA OPPORTUNITIES</span>
+            <p></p>
+            <p>
+                Available for internship opportunities in cybersecurity.
+            </p>
+
+            <small>
+                LIA 1: August – October 2027<br>
+                LIA 2: January – March 2028
+            </small>
+
+        </div>
+
+        <!-- CONTACT LINKS -->
+        <div class="contact-links">
+
+            <a href="mailto:lotta.reiman@hotmail.com?subject=Portfolio%20Inquiry">
+                Email me ↗
+            </a>
+
+            <a href="https://www.linkedin.com/in/lotta-reiman-6a73a01a0/"
+               target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+            </a>
+
+            <a href="https://github.com/akirexxx"
+               target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 </main>
 
@@ -542,27 +572,56 @@ scrambleText();
 setInterval(scrambleText, 8000);
 </script>
 
+
+
 <script>
 const sections = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+const sectionToNav = {
+    home: "home",
+    about: "about",
+    education: "education",
+    skills: "skills",
+    notes: "skills",
+    certificates: "skills",
+    contact: "contact"
+};
 
-        navLinks.forEach((link) => {
-            link.classList.toggle(
-                "active",
-                link.getAttribute("href") === `#${entry.target.id}`
-            );
+function updateActiveNav() {
+    let currentSection = "";
+
+    // Detect when the user reaches the bottom of the page
+    const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 5;
+
+    if (atBottom) {
+        currentSection = "contact";
+    } else {
+        sections.forEach(section => {
+            if (section.getBoundingClientRect().top <= window.innerHeight * 0.35) {
+                currentSection = section.id;
+            }
         });
-    });
-}, {
-    rootMargin: "-30% 0px -60% 0px"
-});
+    }
 
-sections.forEach(section => observer.observe(section));
+    const activeNav = sectionToNav[currentSection];
+
+    navLinks.forEach(link => {
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${activeNav}`
+        );
+    });
+}
+
+window.addEventListener("scroll", updateActiveNav);
+window.addEventListener("load", updateActiveNav);
+
+updateActiveNav();
 </script>
+
 
 
 </body>

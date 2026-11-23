@@ -1284,3 +1284,28 @@ footer p {
         transition-duration: 0.01ms !important;
     }
 }
+
+
+.contact-availability {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.contact-availability > span:nth-child(2) {
+    color: #ff8c42;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.contact-availability p {
+    margin: 12px 0 8px;
+}
+
+.contact-availability small {
+    color: #999;
+    line-height: 1.8;
+}
